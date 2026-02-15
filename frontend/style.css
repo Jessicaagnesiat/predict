@@ -1,0 +1,119 @@
+body {
+    background-color: #0E1117;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.container {
+    width: 600px;
+    background: #1E222B;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #2A2F3A;
+    color: white;
+}
+
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg,#4F8CFF,#1DA1F2);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.result {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.result-card {
+    margin-top: 30px;
+    padding: 25px;
+    background: #1e293b;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.badge.high {
+    background: #16a34a;
+    color: white;
+}
+
+.badge.medium {
+    background: #f59e0b;
+    color: white;
+}
+
+.badge.low {
+    background: #dc2626;
+    color: white;
+}
+
+.probability-container {
+    margin: 20px 0;
+}
+
+.probability-bar {
+    width: 100%;
+    height: 20px;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.probability-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    transition: width 0.6s ease;
+}
+
+.recommendation {
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Purchase Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Customer Purchase Prediction</h1>
+    <p>Predict whether a customer will make a future purchase</p>
+
+    <div class="form-grid">
+        <input id="Total_Session" type="number" placeholder="Total Session">
+        <input id="Total_Action" type="number" placeholder="Total Action">
+        <input id="search" type="number" placeholder="Search Count">
+        <input id="add_to_cart" type="number" placeholder="Add to Cart">
+        <input id="add_to_wishlist" type="number" placeholder="Add to Wishlist">
+        <input id="Recency" type="number" placeholder="Recency (days)">
+        <input id="Total_Spent" type="number" placeholder="Total Spent">
+        <input id="Avg_Spent_Per_Session" type="number" placeholder="Avg Spent Per Session">
+    </div>
+
+    <button onclick="predict()">Predict</button>
+
+    <div id="result-card" class="result-card" style="display:none;">
+        <h2>Prediction Result</h2>
+
+        <div id="risk-badge" class="badge"></div>
+
+        <div class="probability-container">
+            <div class="probability-bar">
+                <div id="probability-fill" class="probability-fill"></div>
+            </div>
+            <span id="probability-text"></span>
+        </div>
+
+        <p id="recommendation" class="recommendation"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
